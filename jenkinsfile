@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Run a command') {
+            steps {
+                bat 'echo %DATE%'
+            }
+        }
+        stage('RUN A COMMAND') {
+            steps {
+                bat '''
+                echo '%LS%'
+                echo '%DATE%'
+                echo '%PWD%'
+                echo '%CAL 2023%'
+                '''
+                
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'test'
+            }
+        }
+        stage('maha') {
+            steps {
+                echo 'student hai'
+            }
+        }
+        stage('project') {
+            steps {
+                echo 'deploy '
+            }
+        }
+    }
+}
